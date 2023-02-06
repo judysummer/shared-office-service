@@ -1,0 +1,179 @@
+package untitled.domain;
+
+import untitled.domain.OfficeRegistered;
+import untitled.domain.OfficeModified;
+import untitled.domain.OfficDeleted;
+import untitled.domain.OfficeReserved;
+import untitled.domain.OfficeCancelled;
+import untitled.OfficeApplication;
+import javax.persistence.*;
+import java.util.List;
+import lombok.Data;
+import java.util.Date;
+
+
+@Entity
+@Table(name="Office_table")
+@Data
+
+public class Office  {
+
+
+    
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    
+    
+    
+    
+    
+    private Long officeId;
+    
+    
+    
+    
+    
+    private String status;
+    
+    
+    
+    
+    
+    private String desc;
+    
+    
+    
+    
+    
+    private String reviewCnt;
+    
+    
+    
+    
+    
+    private String lastAction;
+
+    @PostPersist
+    public void onPostPersist(){
+
+
+        OfficeRegistered officeRegistered = new OfficeRegistered(this);
+        officeRegistered.publishAfterCommit();
+
+
+
+        OfficeModified officeModified = new OfficeModified(this);
+        officeModified.publishAfterCommit();
+
+
+
+        OfficDeleted officDeleted = new OfficDeleted(this);
+        officDeleted.publishAfterCommit();
+
+
+
+        OfficeReserved officeReserved = new OfficeReserved(this);
+        officeReserved.publishAfterCommit();
+
+
+
+        OfficeCancelled officeCancelled = new OfficeCancelled(this);
+        officeCancelled.publishAfterCommit();
+
+    }
+
+    public static OfficeRepository repository(){
+        OfficeRepository officeRepository = OfficeApplication.applicationContext.getBean(OfficeRepository.class);
+        return officeRepository;
+    }
+
+
+
+
+    public static void confirmReserve(ReservationConfirmed reservationConfirmed){
+
+        /** Example 1:  new item 
+        Office office = new Office();
+        repository().save(office);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(reservationConfirmed.get???()).ifPresent(office->{
+            
+            office // do something
+            repository().save(office);
+
+
+         });
+        */
+
+        
+    }
+    public static void cancel(ReservationCancelled reservationCancelled){
+
+        /** Example 1:  new item 
+        Office office = new Office();
+        repository().save(office);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(reservationCancelled.get???()).ifPresent(office->{
+            
+            office // do something
+            repository().save(office);
+
+
+         });
+        */
+
+        
+    }
+    public static void updateReviewCnt(ReviewCreated reviewCreated){
+
+        /** Example 1:  new item 
+        Office office = new Office();
+        repository().save(office);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(reviewCreated.get???()).ifPresent(office->{
+            
+            office // do something
+            repository().save(office);
+
+
+         });
+        */
+
+        
+    }
+    public static void updateReviewCnt(ReviewDeleted reviewDeleted){
+
+        /** Example 1:  new item 
+        Office office = new Office();
+        repository().save(office);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(reviewDeleted.get???()).ifPresent(office->{
+            
+            office // do something
+            repository().save(office);
+
+
+         });
+        */
+
+        
+    }
+
+
+}
