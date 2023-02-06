@@ -69,7 +69,7 @@
             
             me.newValue = {
                 'msgId': 0,
-                'userId': '',
+                'rsvId': '',
                 'sendDate': '2023-02-06',
                 'content': '',
                 'officeId': '',

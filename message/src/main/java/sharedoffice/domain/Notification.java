@@ -28,7 +28,7 @@ public class Notification  {
     
     
     
-    private String userId;
+    private String rsvId;
     
     
     

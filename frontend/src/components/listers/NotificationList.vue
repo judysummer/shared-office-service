@@ -18,7 +18,7 @@
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ MsgId :  {{data.msgId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ UserId :  {{data.userId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ RsvId :  {{data.rsvId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ SendDate :  {{data.sendDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Content :  {{data.content }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ OfficeId :  {{data.officeId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -104,7 +104,7 @@
             
             this.newValue = {
                 'msgId': 0,
-                'userId': '',
+                'rsvId': '',
                 'sendDate': '2023-02-06',
                 'content': '',
                 'officeId': '',

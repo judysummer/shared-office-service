@@ -18,7 +18,7 @@
                                 MsgId :  {{item.msgId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                UserId :  {{item.userId }}
+                                RsvId :  {{item.rsvId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 SendDate :  {{item.sendDate }}

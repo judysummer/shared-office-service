@@ -18,7 +18,7 @@
 
         <v-card-text>
             <Number label="MsgId" v-model="value.msgId" :editMode="editMode"/>
-            <String label="UserId" v-model="value.userId" :editMode="editMode"/>
+            <String label="RsvId" v-model="value.rsvId" :editMode="editMode"/>
             <Date label="SendDate" v-model="value.sendDate" :editMode="editMode"/>
             <String label="Content" v-model="value.content" :editMode="editMode"/>
             <String label="OfficeId" v-model="value.officeId" :editMode="editMode"/>

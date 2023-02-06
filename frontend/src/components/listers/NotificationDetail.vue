@@ -9,7 +9,7 @@
                 <Number label="MsgId" v-model="item.msgId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
+                <String label="RsvId" v-model="item.rsvId" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Date label="SendDate" v-model="item.sendDate" :editMode="editMode" @change="change" />

@@ -67,7 +67,7 @@
             headers: 
                 [
                     { text: "msgId", value: "msgId" },
-                    { text: "userId", value: "userId" },
+                    { text: "rsvId", value: "rsvId" },
                     { text: "sendDate", value: "sendDate" },
                     { text: "content", value: "content" },
                     { text: "officeId", value: "officeId" },
@@ -89,7 +89,7 @@
 
             this.newValue = {
                 'msgId': 0,
-                'userId': '',
+                'rsvId': '',
                 'sendDate': '2023-02-06',
                 'content': '',
                 'officeId': '',
