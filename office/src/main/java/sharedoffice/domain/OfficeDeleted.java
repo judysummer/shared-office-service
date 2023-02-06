@@ -8,7 +8,7 @@ import lombok.*;
 
 @Data
 @ToString
-public class OfficDeleted extends AbstractEvent {
+public class OfficeDeleted extends AbstractEvent {
 
     private Long officeId;
     private String status;
@@ -16,10 +16,10 @@ public class OfficDeleted extends AbstractEvent {
     private String reviewCnt;
     private String lastAction;
 
-    public OfficDeleted(Office aggregate){
+    public OfficeDeleted(Office aggregate){
         super(aggregate);
     }
-    public OfficDeleted(){
+    public OfficeDeleted(){
         super();
     }
 }
